@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
+
 function Recipes ({label, image, cuisineType, source, link}) {
 
-    const labelResult = label.substring(0, 44);
+    const labelResult = label.substring(0, 48);
 
     const sourceBtn = () => {
-        const url = {link};
-        window.open(url, '_blank');
+        // const url = {link};
+        // window.open(url, '_blank');
     }
-
 
     return (
         <div className="recipe">
@@ -20,7 +21,11 @@ function Recipes ({label, image, cuisineType, source, link}) {
                     <p>Source: </p>
                     <button className="source_btn" onClick={sourceBtn}>{source}</button>
                 </div>
+                <button>
+                    <Link to={'/ProductPage' + link.id}>{link}</Link>
+                </button>
             </div> 
+
         </div>
     )
 }

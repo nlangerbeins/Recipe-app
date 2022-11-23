@@ -3,6 +3,12 @@ import './App.css';
 import video from './1video.mp4';
 import icon from './search.png';
 import Recipes from './Recipes'; 
+import { BrowserRouter as Router,
+  Route,
+  Routes,
+  Link
+} from 'react-router-dom';
+import ProductPage from './ProductPage';
 
 function App() {
 
@@ -38,6 +44,10 @@ function App() {
   }
 
   return (
+    <Router>
+      <Routes>
+        <Route path='/ProductPage/:index' element={() => <ProductPage/>}/>
+      </Routes>
     <div className='wrapper'>
       <video autoPlay muted loop>
         <source src={video} type="video/mp4"/>
@@ -66,6 +76,7 @@ function App() {
           ))}
       </div>
     </div>
+    </Router>
   );
 }
 
