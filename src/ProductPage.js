@@ -1,7 +1,7 @@
-function ProductPage() {
+function ProductPage({showRecipe}) {
     return (
         <div>
-            test
+           {showRecipe}
         </div>
     )
 }
