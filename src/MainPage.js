@@ -2,7 +2,7 @@ import video from './1video.mp4';
 import icon from './search.png';
 import Recipes from './Recipes'; 
 import { useEffect, useState } from 'react';
-import ProductPage from './ProductPage';
+import './App.css';
 
 
 function MainPage() {
@@ -17,7 +17,6 @@ function MainPage() {
         const getRecipe = async () => {
         const response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${wordSubmitted}&app_id=${MY_ID}&app_key=${MY_KEY}`);
         const data = await response.json();
-        console.log(data);
         console.log(data.hits);
         setMyRecipes(data.hits);
         }
@@ -65,6 +64,7 @@ function MainPage() {
             cuisineType={element.recipe.cuisineType}
             source={element.recipe.source}
             link={element.recipe.url}
+            // calories={element.recipe.calories}
           />
           ))}
       </div>

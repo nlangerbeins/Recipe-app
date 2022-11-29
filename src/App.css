@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -102,6 +107,11 @@ input::placeholder {
   width: 200px;
   border-radius: 10px;
   border: 1px solid rgb(154, 153, 153);
+  cursor: pointer;
+}
+
+.recipe_img:hover {
+  cursor: pointer;
 }
 
 .recipe_content {

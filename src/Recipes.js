@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
+import './App.css';
 
-function Recipes ({label, image, cuisineType, source, link, id}) {
+function Recipes ({label, image, cuisineType, source, link, id, calories}) {
 
     const labelResult = label.substring(0, 48);
 
     return (
         <div className="recipe">
             <div className="recipe_img">
-                <Link to={'/ProductPage/' +id}><img src={image}/></Link> 
+                <Link className="link" to={'/ProductPage/' +id}>
+                    <img src={image}/>
+                </Link> 
             </div>
             <div className="recipe_content">
                 <Link to={'/ProductPage/' +id}>
