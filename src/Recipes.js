@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import './App.css';
 
-function Recipes ({label, image, cuisineType, source, link, id, calories}) {
+function Recipes ({label, image, cuisineType, source, link, id}) {
 
     const labelResult = label.substring(0, 48);
 
@@ -9,7 +9,7 @@ function Recipes ({label, image, cuisineType, source, link, id, calories}) {
         <div className="recipe">
             <div className="recipe_img">
                 <Link className="link" to={'/ProductPage/' +id}>
-                    <img src={image}/>
+                    <img src={image} alt={label} title={label}/>
                 </Link> 
             </div>
             <div className="recipe_content">
