@@ -8,7 +8,7 @@ function Recipes ({label, image, cuisineType, source, link, id}) {
     return (
         <div className="recipe">
             <div className="recipe_img">
-                <Link className="link" to={'/ProductPage/' +id}>
+                <Link className="link" to={'/CurrentRecipe/' +id}>
                     <img src={image} alt={label} title={label}/>
                 </Link> 
             </div>
